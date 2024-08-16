@@ -519,10 +519,10 @@ export class PickList {
 		if ( type <= 0 || type > 2 ) { return false; }
 
 		let placeString = type === 2 ?
-			'Opacity ranges：0.00 - 1,current:(' + this.opacity + ')' :
+			'Opacity ranges(%)：0.00 - 100,current:(' + this.opacity + ')' :
 			'Please enter the image path to support local and HTTPS';
 		let promptString =
-			type === 2 ? '设置图片不透明度：0-1' : '请输入图片路径，支持本地及https';
+			type === 2 ? '设置图片不透明度：0-100' : '请输入图片路径，支持本地及https';
 
 
 		let option: InputBoxOptions = {
@@ -572,7 +572,7 @@ export class PickList {
 
 	public setImageFileType( value: number ) {
 		this.imageFileType = value;
-	
+
 	}
 
 	// 更新配置
